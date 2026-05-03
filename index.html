@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Juwelier Achim Weidmann · Wiesbaden</title>
+<meta name="description" content="Juwelier Achim Weidmann in Wiesbaden — Trauringe, Verlobungsringe, Uhren und individuelle Goldschmiedearbeiten in der Burgstraße 3." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="assets/hero.webp" type="image/webp" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&family=Italiana&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-elevated:#fbf8f3;
+    --bg-raised:#f5ede1;
+    --bg-deep:#231711;
+    --accent:#2f6e5b;
+    --accent-light:#4a8c78;
+    --accent-dark:#1f4a3d;
+    --ivory:#fcfaf6;
+    --cream:#f5ede1;
+    --muted:#6e5c49;
+    --text:#231711;
+    --walnut:#5b3f2c;
+    --hairline: rgba(35,23,17,.12);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  body{font-family:'Inter',sans-serif;font-weight:300;line-height:1.7;letter-spacing:.01em;overflow-x:hidden;background:var(--bg);color:var(--text)}
+  section{padding:140px 0;position:relative}
+  @media (max-width:768px){section{padding:90px 0}}
+  .container{width:min(1320px,92vw);margin:0 auto}
+
+  .serif{font-family:'Cormorant Garamond',serif;font-weight:400;letter-spacing:.01em}
+  .display{font-family:'Italiana',serif;letter-spacing:.08em}
+  .overline{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);font-weight:500}
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--text);line-height:1.1}
+  h1{font-size:clamp(48px,7vw,108px);letter-spacing:-.005em}
+  h2{font-size:clamp(36px,4.5vw,64px);letter-spacing:-.005em}
+  h3{font-size:clamp(24px,2.4vw,32px)}
+  p{color:var(--muted)}
+  a{color:inherit;text-decoration:none}
+
+  .gold-line{display:inline-flex;align-items:center;gap:14px;color:var(--accent);font-size:11px;letter-spacing:.4em;text-transform:uppercase}
+  .gold-line::before,.gold-line::after{content:"";display:inline-block;width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
+
+  .nav a{font-size:12px;letter-spacing:.28em;text-transform:uppercase;position:relative;padding:10px 0;transition:color .3s ease;color:var(--text);font-weight:400}
+  .nav a::after{content:"";position:absolute;left:50%;bottom:4px;transform:translateX(-50%);width:0;height:1px;background:var(--accent);transition:width .4s ease}
+  .nav a:hover{color:var(--accent)}
+  .nav a:hover::after{width:100%}
+
+  /* TOPBAR */
+  .topbar{background:var(--bg-deep);color:var(--ivory);font-size:11px;letter-spacing:.3em;text-transform:uppercase;padding:11px 0}
+  .topbar .container{display:flex;justify-content:space-between;align-items:center;gap:18px}
+  .topbar a{color:var(--ivory);opacity:.78;transition:opacity .3s}
+  .topbar a:hover{opacity:1;color:var(--accent-light)}
+  .topbar .sep{opacity:.3;margin:0 12px}
+  @media (max-width:720px){.topbar .desktop{display:none}.topbar .container{justify-content:center}}
+
+  /* HEADER */
+  header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--hairline)}
+  header.site .row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:22px 0}
+  header.site .nav-l, header.site .nav-r{display:flex;gap:34px}
+  header.site .nav-r{justify-content:flex-end}
+  header.site .logo{font-family:'Italiana',serif;font-size:24px;letter-spacing:.18em;color:var(--text);text-align:center;text-transform:uppercase}
+  header.site .logo small{display:block;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.42em;color:var(--accent);margin-top:4px;font-weight:500}
+  header.site .iconbtn{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--hairline);border-radius:50%;color:var(--text);transition:all .3s}
+  header.site .iconbtn:hover{border-color:var(--accent);color:var(--accent)}
+  @media (max-width:880px){header.site .nav-l, header.site .nav-r{display:none}header.site .row{grid-template-columns:1fr}header.site .logo{text-align:left}}
+
+  /* HERO */
+  .hero{padding:0;position:relative;background:var(--bg)}
+  .hero-wrap{position:relative;width:100%;height:88vh;min-height:560px;max-height:880px;overflow:hidden}
+  .hero-wrap picture, .hero-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+  .hero-wrap .kb{animation:kenburns 22s ease-in-out infinite alternate}
+  @keyframes kenburns{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.06) translate(-1%,-1%)}}
+  .hero-wrap::after{content:"";position:absolute;inset:18px;border:1px solid rgba(252,250,246,.55);pointer-events:none;z-index:3}
+  .hero-grain{position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");mix-blend-mode:overlay;opacity:.07;pointer-events:none;z-index:2}
+  .hero-content{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;align-items:flex-start;padding:62px 4vw 0;z-index:4;color:var(--ivory)}
+  .hero-content .lead{max-width:620px}
+  .hero-content .overline{color:var(--cream);opacity:.92}
+  .hero-content h1{color:var(--ivory);margin-top:18px;text-shadow:0 4px 32px rgba(0,0,0,.35)}
+  .hero-content h1 em{font-style:italic;color:var(--cream)}
+  .hero-bar{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 4vw;background:linear-gradient(0deg,rgba(35,23,17,.62),rgba(35,23,17,0));z-index:4;color:var(--ivory)}
+  .hero-bar .tags{display:flex;gap:26px;font-size:11px;letter-spacing:.32em;text-transform:uppercase;flex-wrap:wrap}
+  .hero-bar .tags span{opacity:.85}
+  .hero-bar .tags span::after{content:"·";margin-left:26px;opacity:.5}
+  .hero-bar .tags span:last-child::after{content:""}
+  .cta-arrow{display:inline-flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--ivory);padding:14px 22px;border:1px solid rgba(252,250,246,.55);border-radius:999px;backdrop-filter:blur(6px);transition:all .3s ease}
+  .cta-arrow:hover{background:var(--accent);border-color:var(--accent);color:var(--ivory)}
+  .cta-arrow svg{width:14px;height:14px;transition:transform .3s}
+  .cta-arrow:hover svg{transform:translateX(4px)}
+  @media (max-width:720px){.hero-bar{flex-direction:column;align-items:flex-start;gap:14px}.hero-bar .tags{font-size:10px;gap:18px}.hero-content{padding-top:48px}}
+
+  /* INTRO */
+  .intro{background:var(--bg)}
+  .intro .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+  .intro .left .overline{display:inline-block;margin-bottom:24px}
+  .intro .right p{font-size:18px;line-height:1.85;color:var(--muted);max-width:620px}
+  .intro .right p + p{margin-top:18px}
+  .intro .text-cta{display:inline-flex;align-items:center;gap:14px;margin-top:38px;font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);font-weight:500;position:relative}
+  .intro .text-cta::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:var(--accent);transform-origin:left;transform:scaleX(.5);transition:transform .4s ease}
+  .intro .text-cta:hover::after{transform:scaleX(1)}
+  .intro .text-cta svg{width:14px;height:14px;transition:transform .3s}
+  .intro .text-cta:hover svg{transform:translateX(4px)}
+  @media (max-width:880px){.intro .grid{grid-template-columns:1fr;gap:36px}}
+
+  /* CATEGORIES */
+  .categories{background:var(--bg-elevated);position:relative}
+  .categories::before{content:"";position:absolute;inset:0;background:url("assets/texture.webp") center/cover;opacity:.10;mix-blend-mode:multiply;pointer-events:none}
+  .categories .head{display:flex;justify-content:space-between;align-items:end;margin-bottom:64px;gap:24px;position:relative;z-index:1}
+  .categories .head .lead{max-width:520px}
+  .categories .head .overline{display:inline-block;margin-bottom:20px}
+  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:auto auto;gap:22px;position:relative;z-index:1}
+  .cat-card{position:relative;overflow:hidden;background:var(--bg);border:1px solid var(--hairline);transition:all .5s ease}
+  .cat-card .img{position:relative;overflow:hidden;aspect-ratio:4/5}
+  .cat-card .img img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease;filter:saturate(.97)}
+  .cat-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(35,23,17,.18)}
+  .cat-card:hover .img img{transform:scale(1.05)}
+  .cat-card .cap{padding:24px 24px 28px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+  .cat-card .cap .num{font-family:'Italiana',serif;font-size:14px;letter-spacing:.3em;color:var(--accent)}
+  .cat-card .cap .title{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--text);line-height:1.2}
+  .cat-card .cap .sub{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-top:4px;font-weight:400}
+  .cat-card.tall .img{aspect-ratio:4/6}
+  @media (max-width:1100px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.cat-grid{grid-template-columns:1fr;gap:18px}.categories .head{flex-direction:column;align-items:flex-start}}
+
+  /* FEATURED — Roman Numerals */
+  .featured{background:var(--bg)}
+  .featured .head{text-align:center;margin-bottom:72px}
+  .featured .head .gold-line{margin-bottom:18px}
+  .featured-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .feat-card{position:relative}
+  .feat-card .roman{position:absolute;top:18px;right:22px;z-index:2;font-family:'Italiana',serif;font-size:14px;letter-spacing:.3em;color:var(--ivory);text-shadow:0 2px 8px rgba(0,0,0,.4);opacity:.95}
+  .feat-card .img{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--bg-raised)}
+  .feat-card .img img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+  .feat-card:hover .img img{transform:scale(1.04)}
+  .feat-card .meta{padding:20px 0 0}
+  .feat-card .meta .name{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--text);margin-bottom:4px}
+  .feat-card .meta .desc{font-size:13px;color:var(--muted);letter-spacing:.04em}
+  .feat-card .meta .label{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-top:10px;display:block;font-weight:500}
+  @media (max-width:980px){.featured-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.featured-grid{grid-template-columns:1fr;gap:20px}}
+
+  /* ATELIER */
+  .atelier{background:var(--bg-elevated);position:relative;overflow:hidden}
+  .atelier::before{content:"";position:absolute;inset:0;background:url("assets/texture.webp") center/cover;opacity:.10;mix-blend-mode:multiply;pointer-events:none}
+  .atelier .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:90px;align-items:center;position:relative;z-index:1}
+  .atelier .img{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--cream)}
+  .atelier .img::after{content:"";position:absolute;inset:14px;border:1px solid rgba(47,110,91,.32);pointer-events:none;z-index:2}
+  .atelier .img img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s ease}
+  .atelier:hover .img img{transform:scale(1.03)}
+  .atelier .right .overline{display:inline-block;margin-bottom:22px}
+  .atelier .right h2{margin-bottom:28px}
+  .atelier .right h2 em{font-style:italic;color:var(--accent)}
+  .atelier .right p{font-size:17px;line-height:1.85}
+  .atelier .right p + p{margin-top:16px}
+  .atelier .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:46px;padding-top:34px;border-top:1px solid var(--hairline)}
+  .atelier .stat .num{font-family:'Italiana',serif;font-size:36px;color:var(--accent);letter-spacing:.04em}
+  .atelier .stat .lab{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:6px;font-weight:500}
+  @media (max-width:980px){.atelier .grid{grid-template-columns:1fr;gap:48px}.atelier .img{aspect-ratio:4/5}}
+
+  /* DETAIL GRID */
+  .detail-grid{background:var(--bg)}
+  .detail-grid .head{text-align:center;margin-bottom:72px}
+  .dg{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;grid-auto-flow:dense}
+  .dg .cell{position:relative;overflow:hidden;background:var(--bg-raised)}
+  .dg .cell img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease, filter .8s ease}
+  .dg .cell:hover img{transform:scale(1.05);filter:saturate(1.1) hue-rotate(-2deg)}
+  .dg .c1{grid-column:span 3;aspect-ratio:3/2}
+  .dg .c2{grid-column:span 3;aspect-ratio:3/2}
+  .dg .c3{grid-column:span 2;aspect-ratio:1/1}
+  .dg .c4{grid-column:span 2;aspect-ratio:1/1}
+  .dg .c5{grid-column:span 2;aspect-ratio:1/1}
+  .dg .c6{grid-column:span 6;aspect-ratio:21/9}
+  @media (max-width:880px){.dg{grid-template-columns:repeat(2,1fr)}.dg .c1,.dg .c2{grid-column:span 2;aspect-ratio:3/2}.dg .c3,.dg .c4,.dg .c5{grid-column:span 1;aspect-ratio:1/1}.dg .c6{grid-column:span 2;aspect-ratio:16/9}}
+
+  /* CONTACT */
+  .contact{background:var(--bg-deep);color:var(--ivory);position:relative;overflow:hidden}
+  .contact::before{content:"";position:absolute;inset:0;background:url("assets/texture.webp") center/cover;opacity:.05;mix-blend-mode:overlay;pointer-events:none}
+  .contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;position:relative;z-index:1}
+  .contact h2{color:var(--ivory)}
+  .contact h2 em{font-style:italic;color:var(--accent-light)}
+  .contact p{color:rgba(252,250,246,.78)}
+  .contact .left .overline{color:var(--accent-light);margin-bottom:24px;display:inline-block}
+  .contact .left p{font-size:17px;line-height:1.85;margin-top:24px}
+  .contact .left .cta-big{display:inline-flex;align-items:center;gap:16px;margin-top:42px;padding:20px 34px;background:var(--accent);color:var(--ivory);font-size:12px;letter-spacing:.3em;text-transform:uppercase;border-radius:999px;transition:all .3s;font-weight:500}
+  .contact .left .cta-big:hover{background:var(--accent-light);transform:translateY(-2px)}
+  .contact .right{display:grid;gap:34px}
+  .contact .info-block .label{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent-light);margin-bottom:14px;font-weight:500}
+  .contact .info-block .val{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--ivory);line-height:1.4}
+  .contact .info-block .val a{color:var(--ivory);transition:color .3s}
+  .contact .info-block .val a:hover{color:var(--accent-light)}
+  .contact .hours{display:grid;grid-template-columns:auto 1fr;gap:12px 28px}
+  .contact .hours .d{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent-light)}
+  .contact .hours .h{color:rgba(252,250,246,.85)}
+  @media (max-width:880px){.contact .grid{grid-template-columns:1fr;gap:48px}}
+
+  /* FOOTER */
+  footer.site{background:#1a110c;color:rgba(252,250,246,.66);padding:74px 0 38px;font-size:13px}
+  footer.site .grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:60px;margin-bottom:54px}
+  footer.site .col h4{font-family:'Italiana',serif;font-size:15px;color:var(--ivory);letter-spacing:.32em;text-transform:uppercase;margin-bottom:22px;font-weight:400}
+  footer.site .col a{color:rgba(252,250,246,.66);transition:color .3s;display:block;padding:5px 0}
+  footer.site .col a:hover{color:var(--accent-light)}
+  footer.site .brand{font-family:'Italiana',serif;font-size:26px;color:var(--ivory);letter-spacing:.18em;margin-bottom:18px;text-transform:uppercase}
+  footer.site .brand small{display:block;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.42em;color:var(--accent-light);margin-top:8px;font-weight:500}
+  footer.site .legal{padding-top:28px;border-top:1px solid rgba(252,250,246,.1);display:flex;justify-content:space-between;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(252,250,246,.45);flex-wrap:wrap;gap:14px}
+  footer.site .legal a{color:rgba(252,250,246,.45)}
+  footer.site .legal a:hover{color:var(--accent-light)}
+  @media (max-width:880px){footer.site .grid{grid-template-columns:1fr;gap:40px}}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity 1s ease, transform 1s ease}
+  .reveal.is-in{opacity:1;transform:none}
+
+  ::selection{background:var(--accent);color:var(--ivory)}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar" role="contentinfo">
+  <div class="container">
+    <div class="desktop">Burgstraße 3 · 65183 Wiesbaden</div>
+    <div>
+      <a href="tel:+4961137428">+49 611 374 280</a>
+      <span class="sep">·</span>
+      <span class="desktop">Termin nach Vereinbarung</span>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="container">
+    <div class="row">
+      <nav class="nav nav-l">
+        <a href="#kollektion">Kollektion</a>
+        <a href="#trauringe">Trauringe</a>
+        <a href="#atelier">Atelier</a>
+      </nav>
+      <a href="#" class="logo" aria-label="Juwelier Achim Weidmann — Startseite">
+        Weidmann
+        <small>Goldschmiede · seit 1987</small>
+      </a>
+      <nav class="nav nav-r">
+        <a href="#kontakt">Kontakt</a>
+        <a href="#oeffnungszeiten">Besuch</a>
+        <a class="iconbtn" href="tel:+4961137428" aria-label="Anrufen">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z"/></svg>
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-label="Startbild">
+  <div class="hero-wrap">
+    <picture>
+      <source srcset="assets/hero.webp" type="image/webp" />
+      <img class="kb" src="assets/hero.webp" alt="Platinringe und Jade-Cabochon auf Walnussholz vor cremefarbener Leinenwand" loading="eager" fetchpriority="high" />
+    </picture>
+    <div class="hero-grain"></div>
+    <div class="hero-content">
+      <div class="lead reveal">
+        <span class="overline">A Heritage Atelier · Wiesbaden</span>
+        <h1>Schmuck<br/>als <em>Versprechen</em>.</h1>
+      </div>
+    </div>
+    <div class="hero-bar">
+      <div class="tags">
+        <span>Trauringe</span>
+        <span>Verlobungsringe</span>
+        <span>Uhren</span>
+        <span>Goldschmiede</span>
+      </div>
+      <a href="#kontakt" class="cta-arrow">Termin vereinbaren
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro" id="philosophie">
+  <div class="container">
+    <div class="grid">
+      <div class="left reveal">
+        <span class="overline">Philosophie</span>
+        <h2 class="serif">Stücke, die ein Leben<br/>begleiten dürfen.</h2>
+      </div>
+      <div class="right reveal">
+        <p>Seit über drei Jahrzehnten arbeitet Achim Weidmann mitten in der Wiesbadener Burgstraße — ein unabhängiges Atelier, das sich auf das Wesentliche konzentriert: Trauringe, Verlobungsringe und persönliche Goldschmiedearbeiten.</p>
+        <p>Jedes Stück entsteht in ruhiger Handwerks­tradition, mit dem Auge für Materialqualität und der Geduld, die ein Versprechen verdient. Wir nehmen uns Zeit — für Sie, für das Stück, und für den Moment, in dem es übergeben wird.</p>
+        <a href="#atelier" class="text-cta">Atelier kennenlernen
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories" id="kollektion">
+  <div class="container">
+    <div class="head">
+      <div class="lead reveal">
+        <span class="overline">Kollektion</span>
+        <h2 class="serif">Vier Welten —<br/>ein Anspruch.</h2>
+      </div>
+      <p class="reveal" style="max-width:340px;font-size:14px">Von handgefertigten Trauringen bis zur Restaurierung eines Erbstücks. Jede Linie folgt der gleichen Sorgfalt.</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card reveal" href="#trauringe">
+        <div class="img"><img src="assets/detail-06.webp" alt="Trauringe in Walnuss-Etui" loading="lazy"/></div>
+        <div class="cap">
+          <div>
+            <div class="num">I</div>
+            <div class="title">Trauringe</div>
+            <div class="sub">Handgefertigt</div>
+          </div>
+        </div>
+      </a>
+      <a class="cat-card tall reveal" href="#kollektion">
+        <div class="img"><img src="assets/detail-03.webp" alt="Verlobungsring mit Smaragd auf Walnussholz" loading="lazy"/></div>
+        <div class="cap">
+          <div>
+            <div class="num">II</div>
+            <div class="title">Verlobungsringe</div>
+            <div class="sub">Klassik &amp; Solitär</div>
+          </div>
+        </div>
+      </a>
+      <a class="cat-card reveal" href="#kollektion">
+        <div class="img"><img src="assets/detail-02.webp" alt="Halskette mit Jade-Anhänger" loading="lazy"/></div>
+        <div class="cap">
+          <div>
+            <div class="num">III</div>
+            <div class="title">Schmuck</div>
+            <div class="sub">Ketten &amp; Anhänger</div>
+          </div>
+        </div>
+      </a>
+      <a class="cat-card tall reveal" href="#atelier">
+        <div class="img"><img src="assets/detail-04.webp" alt="Armband auf cremefarbener Leinen" loading="lazy"/></div>
+        <div class="cap">
+          <div>
+            <div class="num">IV</div>
+            <div class="title">Atelier­arbeiten</div>
+            <div class="sub">Auf Maß gefertigt</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="featured" id="trauringe">
+  <div class="container">
+    <div class="head">
+      <span class="gold-line reveal">Signature Pieces</span>
+      <h2 class="serif reveal" style="margin-top:18px">Vier ausgewählte Arbeiten<br/>aus dem Hause Weidmann.</h2>
+    </div>
+    <div class="featured-grid">
+      <article class="feat-card reveal">
+        <div class="roman">I</div>
+        <div class="img"><img src="assets/detail-06.webp" alt="Trauringe Set" loading="lazy"/></div>
+        <div class="meta">
+          <div class="name">Trauring · Vita</div>
+          <div class="desc">Platin 950, mattiert</div>
+          <span class="label">Auf Anfrage</span>
+        </div>
+      </article>
+      <article class="feat-card reveal">
+        <div class="roman">II</div>
+        <div class="img"><img src="assets/detail-03.webp" alt="Smaragd-Solitär" loading="lazy"/></div>
+        <div class="meta">
+          <div class="name">Solitär · Esmera</div>
+          <div class="desc">Smaragd, Platinfassung</div>
+          <span class="label">Atelier-Edition</span>
+        </div>
+      </article>
+      <article class="feat-card reveal">
+        <div class="roman">III</div>
+        <div class="img"><img src="assets/detail-02.webp" alt="Jade-Halskette" loading="lazy"/></div>
+        <div class="meta">
+          <div class="name">Collier · Linaria</div>
+          <div class="desc">Platin mit Jade-Anhänger</div>
+          <span class="label">Auf Anfrage</span>
+        </div>
+      </article>
+      <article class="feat-card reveal">
+        <div class="roman">IV</div>
+        <div class="img"><img src="assets/detail-04.webp" alt="Armband mit Charm" loading="lazy"/></div>
+        <div class="meta">
+          <div class="name">Armband · Sereno</div>
+          <div class="desc">Platin, Jade-Charm</div>
+          <span class="label">Atelier-Edition</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ATELIER -->
+<section class="atelier" id="atelier">
+  <div class="container">
+    <div class="grid">
+      <div class="img reveal">
+        <img src="assets/about.webp" alt="Goldschmied bei der Arbeit am Walnuss-Werkbank" loading="lazy"/>
+      </div>
+      <div class="right reveal">
+        <span class="overline">Das Atelier</span>
+        <h2 class="serif">Werkstatt<br/><em>am Burgplatz.</em></h2>
+        <p>Im Atelier in der Burgstraße entstehen Stücke, die nicht in Serie gefertigt werden. Jeder Trauring wird einzeln gefasst, jede Gravur per Hand gesetzt — auf Walnuss­bänken, im Licht der Wiesbadener Altstadt.</p>
+        <p>Achim Weidmann führt das Haus seit 1987 inhabergeführt. Eine Verbindung, die nicht über Filialen, sondern über Beziehungen funktioniert.</p>
+        <div class="stats">
+          <div class="stat"><div class="num">38</div><div class="lab">Jahre Atelier</div></div>
+          <div class="stat"><div class="num">∞</div><div class="lab">Unikate gefertigt</div></div>
+          <div class="stat"><div class="num">1987</div><div class="lab">Gründungsjahr</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL GRID -->
+<section class="detail-grid">
+  <div class="container">
+    <div class="head reveal">
+      <span class="gold-line">Aus dem Atelier</span>
+      <h2 class="serif" style="margin-top:18px">Details, die bleiben.</h2>
+    </div>
+    <div class="dg">
+      <div class="cell c1 reveal"><img src="assets/detail-05.webp" alt="Goldschmiede-Werkzeuge auf Walnuss" loading="lazy"/></div>
+      <div class="cell c2 reveal"><img src="assets/detail-01.webp" alt="Drei Jade-Steine auf Cremepapier" loading="lazy"/></div>
+      <div class="cell c3 reveal"><img src="assets/detail-03.webp" alt="Smaragd-Signet auf Walnuss" loading="lazy"/></div>
+      <div class="cell c4 reveal"><img src="assets/detail-06.webp" alt="Trauringe in Walnuss-Etui" loading="lazy"/></div>
+      <div class="cell c5 reveal"><img src="assets/detail-04.webp" alt="Armband auf Leinen" loading="lazy"/></div>
+      <div class="cell c6 reveal"><img src="assets/detail-02.webp" alt="Halskette mit Jade-Anhänger auf Leinen" loading="lazy"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="kontakt">
+  <div class="container">
+    <div class="grid">
+      <div class="left">
+        <span class="overline reveal">Besuch</span>
+        <h2 class="serif reveal">Wir nehmen uns Zeit —<br/><em>für Ihren Moment.</em></h2>
+        <p class="reveal">Termine vereinbaren wir am liebsten persönlich. Rufen Sie uns an, wir hören zu, und finden gemeinsam den richtigen Rahmen für Ihren Besuch in der Burgstraße.</p>
+        <a href="tel:+4961137428" class="cta-big reveal">+49 611 374 280
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="right" id="oeffnungszeiten">
+        <div class="info-block reveal">
+          <div class="label">Adresse</div>
+          <div class="val"><a href="https://www.google.com/maps/search/Juwelier+Achim+Weidmann+Burgstr+3+Wiesbaden" target="_blank" rel="noopener">Burgstraße 3<br/>65183 Wiesbaden</a></div>
+        </div>
+        <div class="info-block reveal">
+          <div class="label">Öffnungszeiten</div>
+          <div class="hours">
+            <div class="d">Di – Fr</div><div class="h">10:00 – 18:30 Uhr</div>
+            <div class="d">Samstag</div><div class="h">10:00 – 16:00 Uhr</div>
+            <div class="d">So &amp; Mo</div><div class="h">Geschlossen</div>
+          </div>
+        </div>
+        <div class="info-block reveal">
+          <div class="label">Kontakt</div>
+          <div class="val"><a href="tel:+4961137428">+49 611 374 280</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="container">
+    <div class="grid">
+      <div class="col">
+        <div class="brand">Weidmann<small>Goldschmiede · 1987</small></div>
+        <p style="max-width:360px;line-height:1.7">Inhabergeführtes Juweliergeschäft in der Wiesbadener Innenstadt. Trauringe, Verlobungsringe, Uhren und individuelle Atelierarbeiten.</p>
+      </div>
+      <div class="col">
+        <h4>Haus</h4>
+        <a href="#kollektion">Kollektion</a>
+        <a href="#trauringe">Trauringe</a>
+        <a href="#atelier">Atelier</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <div class="col">
+        <h4>Kontakt</h4>
+        <a href="https://www.google.com/maps/search/Juwelier+Achim+Weidmann+Burgstr+3+Wiesbaden" target="_blank" rel="noopener">Burgstraße 3, 65183 Wiesbaden</a>
+        <a href="tel:+4961137428">+49 611 374 280</a>
+        <a href="#oeffnungszeiten">Öffnungszeiten</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <script>document.write(new Date().getFullYear())</script> Achim Weidmann Juwelier · Wiesbaden</span>
+      <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal-on-scroll
+  (() => {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('is-in')); return; }
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      }
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+    els.forEach(el => io.observe(el));
+  })();
+</script>
+
+</body>
+</html>
